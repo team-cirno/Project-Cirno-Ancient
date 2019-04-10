@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
-    <libelement value="jar://$MODULE_DIR$/jxl.jar!/" />
+    <libelement value="file://jxl.jar" />
     <src_description expected_position="1">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="1" />
       <src_folder value="file://$MODULE_DIR$/red" expected_position="2" />
@@ -19,7 +19,7 @@
     <orderEntry type="module-library">
       <library name="jxl.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/jxl.jar!/" />
+          <root url="file://jxl.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
