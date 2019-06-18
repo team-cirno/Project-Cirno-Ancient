@@ -3,7 +3,6 @@ package GUI;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Point;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -30,10 +29,10 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-import Order.Comp;
-import Order.Customer;
-import Order.Order;
-import Order.Product;
+import Object.Order.Comp;
+import Object.Order.Customer;
+import Object.Order.Order;
+import Object.Product.Product;
 
 public class Subwindow extends JFrame implements ActionListener, FocusListener{
 	
@@ -290,7 +289,7 @@ public class Subwindow extends JFrame implements ActionListener, FocusListener{
 
 		System.out.println(o.toString());
 		this.cl.add(o);
-		String[] sd = new String[] {o.getP().getID(),o.getP().getColor(),Double.toString(o.getPrice()),Double.toString(o.getAmount()),Integer.toString(o.getBoxNum())};
+		String[] sd = new String[] {o.getP().getId(),o.getP().getColor(),Double.toString(o.getPrice()),Double.toString(o.getAmount()),Integer.toString(o.getBoxNum())};
 		model.addRow(sd);
 	}
 
@@ -396,7 +395,7 @@ public class Subwindow extends JFrame implements ActionListener, FocusListener{
 			double tmpt =tmppr*tmpb;
 			double tmpa = tmpb*tmpkpg;
 			Product tmpp = new Product(this.table.getModel().getValueAt(i, 0).toString(),this.table.getModel().getValueAt(i, 1).toString());
-			tmpp.setBP(Double.parseDouble(table.getModel().getValueAt(i, 6).toString()));
+			tmpp.setBp(Double.parseDouble(table.getModel().getValueAt(i, 6).toString()));
 			Comp TmpComp = new Comp(tmpp,tmpkpg,tmpb,tmpbx,tmppr,tmpt,tmpa);
 			
 			cl.add(TmpComp);
@@ -407,7 +406,7 @@ public class Subwindow extends JFrame implements ActionListener, FocusListener{
 		tmpo.setCreatTime(this.tl[6].getText());
 		tmpo.setPayAmout(Double.parseDouble(this.tL.getText().substring(this.tL.getText().indexOf(':'), this.tL.getText().length())));
 		if(this.g.c.PlaseOrder(tmpo)) {
-			System.out.println("Order check"+tmpo.toString());
+			System.out.println("Object.Order check"+tmpo.toString());
 			return true;
 		}
 		return false;

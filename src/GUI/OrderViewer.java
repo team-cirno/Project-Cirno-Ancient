@@ -33,9 +33,9 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-import Order.Comp;
-import Order.Customer;
-import Order.Order;
+import Object.Order.Comp;
+import Object.Order.Customer;
+import Object.Order.Order;
 import Tool.Tool;
 
 public class OrderViewer extends JFrame implements ActionListener, FocusListener{
@@ -69,10 +69,10 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 	
 	public OrderViewer(String[] s, Order o) {
 		
-		System.out.println("Order opend: "+o.toString());
+		System.out.println("Object.Order opend: "+o.toString());
 		this.o = o;
 		cl = o.getCompList();
-		this.setTitle("Order Viewer");
+		this.setTitle("Object.Order Viewer");
 		this.setLayout(null);
 		this.setSize(640, 800);
 
@@ -550,8 +550,8 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 		System.out.println(o.getCompList().toString());
 		for(int i=0;i<o.getCompList().size();i++) {
 			Comp tmp = o.getCompList().get(i);
-			System.out.println("Here is "+tmp.getP().getID());
-			table.getModel().setValueAt(tmp.getP().getID(), i, 0);
+			System.out.println("Here is "+tmp.getP().getId());
+			table.getModel().setValueAt(tmp.getP().getId(), i, 0);
 			table.getModel().setValueAt(tmp.getP().getColor(), i, 1);
 			table.getModel().setValueAt(tmp.getBagNum(), i, 2);
 			table.getModel().setValueAt(tmp.getAmount()/1000, i, 3);
@@ -565,8 +565,8 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 		System.out.println(o.getCompList().toString());
 		for(int i=0;i<o.getCompList().size();i++) {
 			Comp tmp = o.getCompList().get(i);
-			System.out.println("Here is "+tmp.getP().getID());
-			table.getModel().setValueAt(tmp.getP().getID(), i, 0);
+			System.out.println("Here is "+tmp.getP().getId());
+			table.getModel().setValueAt(tmp.getP().getId(), i, 0);
 			table.getModel().setValueAt(tmp.getP().getColor(), i, 1);
 			table.getModel().setValueAt(tmp.getBagNum(), i, 2);
 			table.getModel().setValueAt(tmp.getAmount(), i, 3);
@@ -579,8 +579,8 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 		System.out.println(o.getCompList().toString());
 		for(int i=0;i<o.getCompList().size();i++) {
 			Comp tmp = o.getCompList().get(i);
-			System.out.println("Here is "+tmp.getP().getID());
-			table.getModel().setValueAt(tmp.getP().getID(), i, 0);
+			System.out.println("Here is "+tmp.getP().getId());
+			table.getModel().setValueAt(tmp.getP().getId(), i, 0);
 			table.getModel().setValueAt(tmp.getP().getColor(), i, 1);
 			table.getModel().setValueAt(tmp.getKGPBB(), i, 2);
 			table.getModel().setValueAt(tmp.getBagNum(), i, 3);
@@ -596,14 +596,14 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 		System.out.println(o.getCompList().toString());
 		for(int i=0;i<o.getCompList().size();i++) {
 			Comp tmp = o.getCompList().get(i);
-			System.out.println("Here is "+tmp.getP().getID());
-			table.getModel().setValueAt(tmp.getP().getID(), i, 0);
+			System.out.println("Here is "+tmp.getP().getId());
+			table.getModel().setValueAt(tmp.getP().getId(), i, 0);
 			table.getModel().setValueAt(tmp.getP().getColor(), i, 1);
 			table.getModel().setValueAt(tmp.getBagNum(), i, 2);
 			table.getModel().setValueAt(tmp.getPrice(), i, 3);
-			table.getModel().setValueAt(tmp.getP().getBP(), i, 4);
+			table.getModel().setValueAt(tmp.getP().getBp(), i, 4);
 			table.getModel().setValueAt(tmp.getPrice()*tmp.getBagNum(), i, 5);
-			table.getModel().setValueAt(tmp.getP().getBP()*tmp.getBagNum(), i, 6);
+			table.getModel().setValueAt(tmp.getP().getBp()*tmp.getBagNum(), i, 6);
 			System.out.println("Here is table "+table.toString());
 		}
 		

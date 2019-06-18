@@ -1,4 +1,6 @@
-package Order;
+package Object.Order;
+
+import Object.Product.Product;
 
 import java.io.Serializable;
 

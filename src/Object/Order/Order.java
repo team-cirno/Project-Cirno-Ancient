@@ -1,4 +1,4 @@
-package Order;
+package Object.Order;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -70,7 +70,7 @@ public class Order implements Serializable{
 		 for(Comp x: compList) {
 			 PayAmout=PayAmout+x.getPayAmount();
 			 boxcount=boxcount+x.getBoxNum();
-			 costcount=costcount+x.getP().getBP()*x.getBagNum();
+			 costcount=costcount+x.getP().getBp()*x.getBagNum();
 		 }
 		this.setCost(costcount);
 		this.setBoxNum(boxcount);
@@ -273,7 +273,7 @@ public class Order implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Order [cus=" + cus.toString() + ", Address=" + Address + ", CompList=" + CompList + ", Instrotion=" + Instrotion
+		return "Object.Order [cus=" + cus.toString() + ", Address=" + Address + ", CompList=" + CompList + ", Instrotion=" + Instrotion
 				+ ", OrderID=" + OrderID + ", Status=" + Status + ", OrderedDate=" + OrderedDate + ", Auth=" + Auth
 				+ ", DeadLine=" + DeadLine + ", CreatTime=" + CreatTime + ", CreaterID=" + CreaterID + ", PayMathend="
 				+ PayMathend + ", PayDay=" + PayDay + ", PayAmout=" + PayAmout + ", cost=" + cost + ", persentge="

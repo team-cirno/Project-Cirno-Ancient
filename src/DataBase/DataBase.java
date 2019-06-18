@@ -10,9 +10,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import Order.Customer;
-import Order.Order;
-import Order.Product;
+import Object.Order.Customer;
+import Object.Order.Order;
+import Object.Product.Product;
 import Tool.Logger;
 
 public class DataBase {
@@ -130,7 +130,7 @@ public class DataBase {
 	
 	public Object Search(String type, String[] Keywords) {
 		
-		if(type.equals("Order")) {
+		if(type.equals("Object/Order")) {
 			
 			ArrayList<Order> res = new ArrayList<Order>();
 			
@@ -176,7 +176,7 @@ public class DataBase {
 	
 public Object SoftSearch(String type, String[] Keywords) {
 		
-		if(type.equals("Order")) {
+		if(type.equals("Object/Order")) {
 			
 			ArrayList<Order> res = new ArrayList<Order>();
 			
@@ -220,8 +220,8 @@ public Object SoftSearch(String type, String[] Keywords) {
 		}
 	}
 	/*
-	public Order LocatOrder(Order o) {
-		for(Order tmp : this.DS.getOrderList()) {
+	public Object.Order LocatOrder(Object.Order o) {
+		for(Object.Order tmp : this.DS.getOrderList()) {
 			if(tmp.equals(o)) {
 				return tmp;
 			}
@@ -268,7 +268,7 @@ public Object SoftSearch(String type, String[] Keywords) {
 
 		ord.setOrderID("+"+Integer.toString(count)+"-"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH)+1));
 		this.DS.addOrder(ord);
-		logger.Log("Saved Order"+ord.toString());
+		logger.Log("Saved Object.Order"+ord.toString());
 		return true;
 		
 	}
@@ -290,9 +290,9 @@ public Object SoftSearch(String type, String[] Keywords) {
 		return tmp;
 	}
 	/*
-	public synchronized boolean MotiOrder(Order org,Order tobe) {
+	public synchronized boolean MotiOrder(Object.Order org,Object.Order tobe) {
 		
-		this.Search("Order", Keywords)
+		this.Search("Object.Order", Keywords)
 		
 		if() {
 			
