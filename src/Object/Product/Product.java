@@ -21,7 +21,7 @@ public class Product implements Serializable {
 
   private String size;
 
-  private String Shape;
+  private String shape;
 
   private boolean hole;
 
@@ -33,19 +33,6 @@ public class Product implements Serializable {
 
   }
 
-
-	/*
-	public Product(Product tmp) {
-		this.id=tmp.getId();
-		this.type=tmp.getType();
-		this.material=tmp.getMaterial();
-		this.Brand=tmp.getBrand();
-		this.size=tmp.getSize();
-		this.Shape=tmp.getShape();
-		this.hole=tmp.isHole();
-	}*/
-
-
   public Product(String iD, String type, String material, String brand, String size, String shape, boolean hole) {
     super();
     id = iD;
@@ -53,7 +40,7 @@ public class Product implements Serializable {
     this.material = material;
     Brand = brand;
     this.size = size;
-    Shape = shape;
+    this.shape = shape;
     this.hole = hole;
   }
 
@@ -95,13 +82,16 @@ public class Product implements Serializable {
 
   }
 
+  public static long getSerialVersionUID() {
+    return serialVersionUID;
+  }
 
   public String getId() {
     return id;
   }
 
-  public void setId(String iD) {
-    id = iD;
+  public void setId(String id) {
+    this.id = id;
   }
 
   public String getType() {
@@ -145,11 +135,11 @@ public class Product implements Serializable {
   }
 
   public String getShape() {
-    return Shape;
+    return shape;
   }
 
   public void setShape(String shape) {
-    Shape = shape;
+    this.shape = shape;
   }
 
   public boolean isHole() {
@@ -164,22 +154,22 @@ public class Product implements Serializable {
     return bp;
   }
 
-  public void setBp(double d) {
-    bp = d;
+  public void setBp(double bp) {
+    this.bp = bp;
   }
 
   public String getP_vale() {
     return p_vale;
   }
 
-  public void setP_vale(String pVale) {
-    p_vale = pVale;
+  public void setP_vale(String p_vale) {
+    this.p_vale = p_vale;
   }
 
   @Override
   public String toString() {
     return "Product [id=" + id + ", type=" + type + ", color=" + color + ", material=" + material + ", Brand="
-            + Brand + ", size=" + size + ", Shape=" + Shape + ", hole=" + hole + ", SP=" + bp + ", p_vale=" + p_vale
+            + Brand + ", size=" + size + ", shape=" + shape + ", hole=" + hole + ", SP=" + bp + ", p_vale=" + p_vale
             + "]";
   }
 }
