@@ -2,14 +2,11 @@ package DataObject.Order;
 
 import DataObject.Product.Product;
 
-import java.io.Serializable;
-
-public class Comp implements Serializable{
+public class Comp{
 	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2994972833734999587L;
 	Product P;
 	double Amount;
 	double payAmount;

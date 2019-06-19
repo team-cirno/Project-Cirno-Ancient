@@ -1,14 +1,14 @@
 package DataObject.Product;
 
-import java.io.Serializable;
-import java.util.UUID;
-
-public class Product implements Serializable {
+public class Product {
 
   /**
    *
    */
   private ProductID id;
+  private String name;
+  private String tag;
+
 
   public Product() {
 
