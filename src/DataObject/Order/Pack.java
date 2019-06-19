@@ -1,4 +1,4 @@
-package Object.Order;
+package DataObject.Order;
 
 import java.io.Serializable;
 

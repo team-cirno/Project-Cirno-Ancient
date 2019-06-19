@@ -3,9 +3,9 @@ package DataBase;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import Object.Order.Customer;
-import Object.Order.Order;
-import Object.Product.Product;
+import DataObject.Order.Customer;
+import DataObject.Order.Order;
+import DataObject.Product.Product;
 
 public class DataSet implements Serializable {
 	/**

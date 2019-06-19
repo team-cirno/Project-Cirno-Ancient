@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 import GUI.GUIMain;
 import GUI.Subwindow;
-import Object.Order.Customer;
-import Object.Order.Order;
-import Object.Order.Pack;
+import DataObject.Order.Customer;
+import DataObject.Order.Order;
+import DataObject.Order.Pack;
 import Tool.Logger;  
 
 public class Client extends Thread{

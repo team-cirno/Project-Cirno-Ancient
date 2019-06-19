@@ -24,7 +24,7 @@ System.out.println("Connected");
 isConnected = true;
 outputStream = new ObjectOutputStream(socket.getOutputStream());
 Student student = new Student(1, "Bijoy");
-System.out.println("Object to be written = " + student);
+System.out.println("DataObject to be written = " + student);
 outputStream.writeObject(student);
 
 } catch (SocketException se) {

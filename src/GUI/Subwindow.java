@@ -29,10 +29,10 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-import Object.Order.Comp;
-import Object.Order.Customer;
-import Object.Order.Order;
-import Object.Product.Product;
+import DataObject.Order.Comp;
+import DataObject.Order.Customer;
+import DataObject.Order.Order;
+import DataObject.Product.Product;
 
 public class Subwindow extends JFrame implements ActionListener, FocusListener{
 	
@@ -214,7 +214,7 @@ public class Subwindow extends JFrame implements ActionListener, FocusListener{
         table.setGridColor(Color.gray);
         table.setRowHeight(20);
         
-        //table.setDefaultEditor(Object.class, null);
+        //table.setDefaultEditor(DataObject.class, null);
         System.out.println("List Updated"+" "+table.getRowCount()+" "+table.getColumnCount());
 		//model = (DefaultTableModel)table.getModel();
         jsp= new JScrollPane(table);
@@ -406,7 +406,7 @@ public class Subwindow extends JFrame implements ActionListener, FocusListener{
 		tmpo.setCreatTime(this.tl[6].getText());
 		tmpo.setPayAmout(Double.parseDouble(this.tL.getText().substring(this.tL.getText().indexOf(':'), this.tL.getText().length())));
 		if(this.g.c.PlaseOrder(tmpo)) {
-			System.out.println("Object.Order check"+tmpo.toString());
+			System.out.println("DataObject.Order check"+tmpo.toString());
 			return true;
 		}
 		return false;

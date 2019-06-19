@@ -1,6 +1,6 @@
-package Object.Order;
+package DataObject.Order;
 
-import Object.Product.Product;
+import DataObject.Product.Product;
 
 import java.io.Serializable;
 

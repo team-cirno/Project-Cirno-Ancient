@@ -13,9 +13,9 @@ import java.net.Socket;
 import java.net.SocketException;
 
 import DataBase.DataBase;
-import Object.Order.Customer;
-import Object.Order.Order;
-import Object.Order.Pack;
+import DataObject.Order.Customer;
+import DataObject.Order.Order;
+import DataObject.Order.Pack;
 import Tool.Logger;
 
 public class ServerThread extends Thread {
@@ -171,16 +171,16 @@ public class ServerThread extends Thread {
     private Pack RequseHander(Pack req) {
     	
     	if(req.getMes().equals("PlaceOrder")) {
-    		logger.Log("Placeing Object.Order...");
+    		logger.Log("Placeing DataObject.Order...");
 
     		this.DB.AddOrder( (Order) req.getBag());
-    		//this.DB.AddCustomer(((Object.Order) req.getBag()).getCus());
-    		logger.Log("Object.Order Added.");
+    		//this.DB.AddCustomer(((DataObject.Order) req.getBag()).getCus());
+    		logger.Log("DataObject.Order Added.");
     		this.sm.Cast("Update",req.getBag());
-    		return new Pack("Object.Order Added.");
+    		return new Pack("DataObject.Order Added.");
     	} else if(req.getMes().equals("PullList")){
     		logger.Log("PullList.");
-    		return new Pack("Object.Order List", this.DB.PullOrder());
+    		return new Pack("DataObject.Order List", this.DB.PullOrder());
     		
     	}else if(req.getMes().equals("GetCus")) {
     		logger.Log("GetCus.");

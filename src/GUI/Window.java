@@ -23,7 +23,7 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-import Object.Order.Order;
+import DataObject.Order.Order;
 import Tool.Logger;
 
 public class Window extends JFrame implements ActionListener{

@@ -23,7 +23,7 @@ System.out.println("Connected");
 inStream = new ObjectInputStream(socket.getInputStream());
 
 Student student = (Student) inStream.readObject();
-System.out.println("Object received = " + student);
+System.out.println("DataObject received = " + student);
 socket.close();
 
 } catch (SocketException se) {

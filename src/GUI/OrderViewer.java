@@ -33,9 +33,9 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-import Object.Order.Comp;
-import Object.Order.Customer;
-import Object.Order.Order;
+import DataObject.Order.Comp;
+import DataObject.Order.Customer;
+import DataObject.Order.Order;
 import Tool.Tool;
 
 public class OrderViewer extends JFrame implements ActionListener, FocusListener{
@@ -69,10 +69,10 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 	
 	public OrderViewer(String[] s, Order o) {
 		
-		System.out.println("Object.Order opend: "+o.toString());
+		System.out.println("DataObject.Order opend: "+o.toString());
 		this.o = o;
 		cl = o.getCompList();
-		this.setTitle("Object.Order Viewer");
+		this.setTitle("DataObject.Order Viewer");
 		this.setLayout(null);
 		this.setSize(640, 800);
 
@@ -196,7 +196,7 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
         table.setRowHeight(20);
         table.setEnabled(false);
         
-        //table.setDefaultEditor(Object.class, null);
+        //table.setDefaultEditor(DataObject.class, null);
         System.out.println("List Updated"+" "+table.getRowCount()+" "+table.getColumnCount());
 		//model = (DefaultTableModel)table.getModel();
         jsp= new JScrollPane(table);
@@ -300,7 +300,7 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
         table.setRowHeight(20);
         table.setEnabled(true);
         
-        //table.setDefaultEditor(Object.class, null);
+        //table.setDefaultEditor(DataObject.class, null);
         System.out.println("List Updated"+" "+table.getRowCount()+" "+table.getColumnCount());
 		//model = (DefaultTableModel)table.getModel();
         jsp= new JScrollPane(table);
@@ -412,7 +412,7 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 	        table.setRowHeight(20);
 	        table.setEnabled(false);
 	        
-	        //table.setDefaultEditor(Object.class, null);
+	        //table.setDefaultEditor(DataObject.class, null);
 	        System.out.println("List Updated"+" "+table.getRowCount()+" "+table.getColumnCount());
 			//model = (DefaultTableModel)table.getModel();
 	        jsp= new JScrollPane(table);
@@ -515,7 +515,7 @@ public class OrderViewer extends JFrame implements ActionListener, FocusListener
 	        table.setRowHeight(20);
 	        table.setEnabled(false);
 	        
-	        //table.setDefaultEditor(Object.class, null);
+	        //table.setDefaultEditor(DataObject.class, null);
 	        System.out.println("List Updated"+" "+table.getRowCount()+" "+table.getColumnCount());
 			//model = (DefaultTableModel)table.getModel();
 	        jsp= new JScrollPane(table);
