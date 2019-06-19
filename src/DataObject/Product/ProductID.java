@@ -15,4 +15,9 @@ public class ProductID extends DataObject.ObjectID {
   public void setCid(String cid) {
     this.cid = cid;
   }
+
+  @Override
+  protected void log() {
+
+  }
 }

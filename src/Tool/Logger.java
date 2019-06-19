@@ -25,15 +25,6 @@ public class Logger {
 		LogSet.add(CreatTime+" "+Obj.getClass().getSimpleName()+": "+log);
 	}
 	
-	public void Log(boolean log) {
-		
-	    SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss"); 
-	    Date time = new Date();  
-		String CreatTime=formatter.format(time); 
-		System.out.println(CreatTime+" "+Obj.getClass().getSimpleName()+": "+log);
-		LogSet.add(CreatTime+" "+Obj.getClass().getSimpleName()+": "+log);
-	}
-	
 	public Logger(Object obj){
 		this.Obj=obj;
 		this.num++;
@@ -45,8 +36,7 @@ public class Logger {
 			SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss"); 
 			Date time = new Date();  
 			String CreatTime=formatter.format(time); 
-			createFile(CreatTime+"output.txt",this.LogSet); 
-
+			createFile(CreatTime+"output.txt",this.LogSet);
 		}
 		num--;
 	}

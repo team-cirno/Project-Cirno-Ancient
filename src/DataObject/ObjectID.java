@@ -2,7 +2,7 @@ package DataObject;
 
 import java.util.UUID;
 
-public class ObjectID {
+public abstract class ObjectID {
 
 
   private String sid;
@@ -59,4 +59,6 @@ public class ObjectID {
   public void setUuid(UUID uuid) {
     this.uuid = uuid;
   }
+
+  protected abstract void log();
 }
